@@ -9,7 +9,11 @@
 
 void hello(request_t *req, response_t *res)
 {
-    printf("Hello World\n");
+    // printf("%s\n", get_header(req->headers, "User-Agent"));
+    // printf("%s\n", get_header(req->body.params, "UserName"));
+    // printf("%s\n", req->body.data);
+
+
     add_status_code_res(res, "200");
     add_header(&(res->headers), "Content-Type", "text/html");
     // add_body_res(res, "<h1>Hello World</h1>");
